@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">My Trip</string>
-    <string name="distance">Distance</string>
+    <string name="distance">Distance in meters</string>
     <string name="price">Price</string>
     <string name="autonomy">Autonomy</string>
     <string name="calc">Calculate</string>
+    <string name="MESSAGE_ENTER_VALID_VALUES">Please enter valid values</string>
+    <string name="MESSAGE_EMPTY_VALUES">There are some value(s) empty, please enter correct values</string>
 </resources>
