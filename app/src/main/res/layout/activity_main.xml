@@ -9,27 +9,50 @@
 
     <EditText
         android:id="@+id/editDistance"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/mEditTextStyle"
         android:hint="@string/distance"/>
+
+    <TextView
+        style="@style/mDescriptionEditTextStyle"
+        android:text="Kilometers total" />
 
     <EditText
         android:id="@+id/editPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/mEditTextStyle"
         android:hint="@string/price"/>
+
+    <TextView
+        style="@style/mDescriptionEditTextStyle"
+        android:text="Price for liters" />
 
     <EditText
         android:id="@+id/editAutonomy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/mEditTextStyle"
         android:hint="@string/autonomy"/>
+
+    <TextView
+        style="@style/mDescriptionEditTextStyle"
+        android:text="KMs / liter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="center"
+        android:text="Your total spend will be:"
+        android:textAllCaps="true"
+        android:textColor="@color/colorText"
+        android:textSize="10sp"/>
 
     <TextView
         android:id="@+id/textTotalValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$ 0,00"/>
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:textColor="@color/colorAccent"
+        android:text="R$ 0"/>
 
     <Button
         android:id="@+id/buttonCalculate"

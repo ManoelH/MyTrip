@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="mEditTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textColorHint">@color/colorDarkGray</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/round_et</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mDescriptionEditTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorDarkGray</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>
