@@ -2,9 +2,10 @@ package com.manoelh.mytrip
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 
 class MainActivity : AppCompatActivity()/*, View.OnClickListener*/ {
@@ -16,10 +17,12 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/ {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //buttonCalculate.setOnClickListener(this)
+        buttonCalculate.setOnClickListener{
+            onClickButtonCalculate()
+        }
     }
 
-    fun onClickButtonCalculate(view: View){
+    private fun onClickButtonCalculate() {
         if (isEmptyValues()) {
             try {
                 calculateValue()
@@ -32,11 +35,10 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/ {
     }
 
     private fun calculateValue(){
-
         val distance = editDistance.text.toString().toDouble()
         val price = editPrice.text.toString().toDouble()
-        val  autonomy = editAutonomy.text.toString().toDouble()
-        val total = (distance * price) / autonomy
+        val autonomy = editAutonomy.text.toString().toDouble()
+        val total = BigDecimal(((distance * price) / autonomy)).setScale(2, RoundingMode.HALF_EVEN)
         textTotalValue.text = "R$ $total"
     }
 

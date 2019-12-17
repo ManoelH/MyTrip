@@ -1,65 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editDistance"
-        style="@style/mEditTextStyle"
-        android:hint="@string/distance"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        style="@style/mDescriptionEditTextStyle"
-        android:text="Kilometers total" />
+        <EditText
+            android:id="@+id/editDistance"
+            style="@style/mEditTextStyle"
+            android:hint="@string/distance" />
 
-    <EditText
-        android:id="@+id/editPrice"
-        style="@style/mEditTextStyle"
-        android:hint="@string/price"/>
+        <TextView
+            style="@style/mDescriptionEditTextStyle"
+            android:text="Kilometers total" />
 
-    <TextView
-        style="@style/mDescriptionEditTextStyle"
-        android:text="Price for liters" />
+        <EditText
+            android:id="@+id/editPrice"
+            style="@style/mEditTextStyle"
+            android:hint="@string/price" />
 
-    <EditText
-        android:id="@+id/editAutonomy"
-        style="@style/mEditTextStyle"
-        android:hint="@string/autonomy"/>
+        <TextView
+            style="@style/mDescriptionEditTextStyle"
+            android:text="Price for liters" />
 
-    <TextView
-        style="@style/mDescriptionEditTextStyle"
-        android:text="KMs / liter" />
+        <EditText
+            android:id="@+id/editAutonomy"
+            style="@style/mEditTextStyle"
+            android:hint="@string/autonomy" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
-        android:text="Your total spend will be:"
-        android:textAllCaps="true"
-        android:textColor="@color/colorText"
-        android:textSize="10sp"/>
+        <TextView
+            style="@style/mDescriptionEditTextStyle"
+            android:text="KMs / liter" />
 
-    <TextView
-        android:id="@+id/textTotalValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="40sp"
-        android:textColor="@color/colorAccent"
-        android:text="R$ 0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:text="Your total spend will be:"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="10sp" />
 
-    <Button
-        android:id="@+id/buttonCalculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/calc"
-        android:layout_marginLeft="150dp"
-        android:onClick="onClickButtonCalculate"/>
+        <TextView
+            android:id="@+id/textTotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="R$ 0"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/round_et_button"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/calc"
+            android:textColor="@color/colorLightGray" />
+    </LinearLayout>
+</ScrollView>
